@@ -249,7 +249,7 @@ if (n /= size(y) .or. n == 0) then
 end if
 x_mean = sum(x) / n
 y_mean = sum(y) / n
-cov_xy = sum((x - x_mean) * (y - y_mean))
+cov_xy = sum((x - x_mean) * (y - y_mean)) / (n-1)
 end function cov
 
 pure function acf_vec(x, nacf) result(xacf)
